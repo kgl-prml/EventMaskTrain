@@ -1,0 +1,39 @@
+DATASET:
+  DATAROOT: './experiments/data/'
+  CLIP_LEN: 8
+  CLIP_STRIDE: 4
+  TRAIN_SPLIT_NAME: 'split2_train.lst'
+  TEST_SPLIT_NAME: 'split2_test.lst'
+
+#DATA_TRANSFORM:
+#  LOADSIZE: 512
+#  FINESIZE: 448
+
+ANNOT:
+  TRAIN_OUT_PATH: "/home/diva/gkang/KF1_annot/mask_gt_train/"
+  TEST_OUT_PATH: "/home/diva/gkang/KF1_annot/mask_gt_test/"
+  TRAIN_DEF_PATH: "/home/diva/gkang/KF1_annot/kitware_eo_s2-train_158.json"
+  TEST_DEF_PATH: "/home/diva/gkang/KF1_annot/kitware_eo_s2-test_99.json"
+  
+TRAIN:
+  BATCH_SIZE: 4
+  #OPTIMIZER: 'Adam'
+  LR_SCHEDULE: 'inv'
+  LR_MULT: 10.0
+  WPOS: 0.9
+  BASE_LR: 0.001
+  MAX_EPOCHS: 5000
+  POS_RATIO: 1.0
+  SAVE_CKPT_INTERVAL: 200.0
+  TEST_INTERVAL: 1.0
+
+INV:
+  ALPHA: 0.001
+  BETA: 0.75
+
+TEST:
+  BATCH_SIZE: 4
+
+SAVE_DIR: "./experiments/ckpt"
+#RESUME: "./experiments/ckpt/kf1_all_train/ckpt_1299_83199.resume"
+NUM_WORKERS: 10

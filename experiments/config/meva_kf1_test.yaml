@@ -1,0 +1,19 @@
+DATASET:
+  DATAROOT: '/hdd6t/meva/masks'
+  CLIP_LEN: 8
+  CLIP_STRIDE: 4
+  TEST_SPLIT_NAME: 'video_list_test_vis.txt'
+  
+#DATA_TRANSFORM:
+#  FINESIZE: 112
+#  LOADSIZE: 224
+
+TEST:
+  BATCH_SIZE: 1
+  WITH_DENSE_CRF: False
+  WITH_MASK: False
+
+SAVE_DIR: "./experiments/ckpt"
+#WEIGHTS: "./experiments/ckpt/with_dice_loss_new/ckpt_1239_52079.weights"
+WEIGHTS: "./experiments/ckpt/with_BF_loss/ckpt_959_40319.weights"
+NUM_WORKERS: 8
