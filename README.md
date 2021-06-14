@@ -1,4 +1,4 @@
-# EventMaskGen
+# EventMaskTrain
 
 To train your model, run:
 
